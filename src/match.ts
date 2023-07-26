@@ -2,12 +2,12 @@ export const defaultKey = '_';
 export const matchSymbol = Symbol('match');
 
 export interface Matchable<TShape extends Record<any, any[]>> {
-    [matchSymbol]: () => { [key in keyof TShape]: [key, TShape[key]] }[keyof TShape];
+    [matchSymbol]: () => { [Key in keyof TShape]: [Key, TShape[Key]] }[keyof TShape];
     match: <TResult>(patterns: Patterns<TShape, TResult>) => TResult;
 }
 
 export type PatternsWithoutDefault<TShape extends Record<any, any[]>, TResult> = {
-    [key in keyof TShape]: (...args: TShape[key]) => TResult;
+    [Key in keyof TShape]: (...args: TShape[Key]) => TResult;
 };
 
 export type PatternsWithDefault<TShape extends Record<any, any[]>, TResult> = Partial<
