@@ -1,0 +1,33 @@
+{
+    "name": "@namannehra/match",
+    "version": "0.0.1",
+    "license": "MIT",
+    "author": "Naman Nehra <namannehra@proton.me>",
+    "files": [
+        "dist"
+    ],
+    "type": "module",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/namannehra/match.git"
+    },
+    "publishConfig": {
+        "access": "public"
+    },
+    "packageManager": "yarn@3.6.1",
+    "scripts": {
+        "build": "tsc --build",
+        "format:check": "prettier --check .",
+        "format:write": "prettier --write ."
+    },
+    "dependencies": {
+        "tslib": "^2.6.1"
+    },
+    "devDependencies": {
+        "@yarnpkg/sdks": "^3.0.0-rc.48",
+        "prettier": "3.0.0",
+        "typescript": "~5.1.6"
+    }
+}
